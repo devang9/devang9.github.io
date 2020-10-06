@@ -1,1 +1,1 @@
-Heelo, welcome to my portfolio
+Hello, welcome to my portfolio
