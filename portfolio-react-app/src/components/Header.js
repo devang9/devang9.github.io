@@ -3,6 +3,46 @@ import Typing from 'react-typing-animation';
 class Header extends Component {
 
     render() {
+        var social = [
+            {
+                "name": "facebook",
+                "url": "http://facebook.com/tim.baker.906",
+                "className": "fa fa-facebook"
+            },
+            {
+                "name": "twitter",
+                "url": "http://twitter.com",
+                "className": "fa fa-twitter"
+            },
+            {
+                "name": "google-plus",
+                "url": "http://googleplus.com/tbakerx",
+                "className": "fa fa-google-plus"
+            },
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/in/tim-baker-8420009a/",
+                "className": "fa fa-linkedin"
+            },
+            {
+                "name": "instagram",
+                "url": "http://instagram.com/tbaker_x",
+                "className": "fa fa-instagram"
+            },
+            {
+                "name": "github",
+                "url": "http://github.com/tbakerx",
+                "className": "fa fa-github"
+            },
+            {
+                "name": "skype",
+                "url": "http://skype.com",
+                "className": "fa fa-skype"
+            }
+        ]
+        var networks = social.map(function (network) {
+            return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
+        })
         return (
             <header id="home">
 
@@ -16,7 +56,6 @@ class Header extends Component {
                         <li><a className="smoothscroll" href="#about">About</a></li>
                         <li><a className="smoothscroll" href="#resume">Resume</a></li>
                         <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-                        <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
                         <li><a className="smoothscroll" href="#contact">Contact</a></li>
                     </ul>
 
@@ -25,15 +64,18 @@ class Header extends Component {
                 <div className="row banner">
                     <div className="banner-text">
                         <Typing loop>
+                            <Typing.Speed ms={100} />
                             <span><h1 className="responsive-headline">I'm Devang Chheda.</h1></span>
+                            {/* <Typing.Backspace count={20} /> */}
+                            {/* <Typing.Speed ms={100} /> */}
+                            <Typing.Delay ms={2000} />
+                            <Typing.Speed ms={50} />
                             <Typing.Backspace count={20} />
                         </Typing>
-
-                        {/* <h3>I'm a developer.</h3> */}
                         <hr />
-                        <ul className="social">
-
-                        </ul>
+                        {/* <ul className="social">
+                            {networks}
+                        </ul> */}
                     </div>
                 </div>
 
